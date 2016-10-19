@@ -1,0 +1,29 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^2.22.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --progress --hot --host 0.0.0.0",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gyoon/portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gyoon/portal/issues"
+  },
+  "homepage": "https://github.com/gyoon/portal#readme"
+}
