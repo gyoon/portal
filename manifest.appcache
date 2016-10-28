@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 532701d7534db4aac1f2
+# a38ffe337b34430b2aca
 
 /portalsrc/assets/KoPubDotum-Bold.eot
 /portalsrc/assets/KoPubDotum-Light.eot
@@ -16,16 +16,16 @@ CACHE MANIFEST
 /portal5c8c162bea49826ce6d98fa5ed44b37c.jpg
 /portalstatic/bundle.js
 /portalsrc/css/style.css
-/portalportal.html
-/portalportal/bio.html
-/portalportal/reactTutPart1.html
-/portalportal/about.html
-/portalportal/projects.html
-/portalportal/projects/projectTired.html
-/portalportal/projects/backOffice.html
-/portalportal/projects/sweChan.html
-/portalportal/contact.html
-/portalportal/404.html
+/portalindex.html
+/portalbio.html
+/portalreactTutPart1.html
+/portalabout.html
+/portalprojects.html
+/portalprojects/projectTired.html
+/portalprojects/backOffice.html
+/portalprojects/sweChan.html
+/portalcontact.html
+/portal404.html
 
 NETWORK:
 *
