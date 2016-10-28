@@ -1,31 +1,31 @@
 CACHE MANIFEST
-# 7c0a4e1ea7ec4b442979
+# ce7e8e9e843d917b3792
 
-/src/assets/KoPubDotum-Bold.eot
-/src/assets/KoPubDotum-Light.eot
-/src/assets/KoPubDotum-Medium.eot
-/src/assets/KoPubDotumPB.eot
-/src/assets/KoPubDotum-Bold.woff
-/src/assets/KoPubDotum-Light.woff
-/src/assets/KoPubDotum-Medium.woff
-/src/assets/KoPubDotumPB.woff
-/4a8380113927d6b45132b7ba89c10bcd.jpg
-/4a127a006a33ff44a147f05d220204d3.png
-/01c9c905d1bebbd348072dbbd238b8fe.png
-/3d54e833ba00976d9f34c83a29c8b884.png
-/5c8c162bea49826ce6d98fa5ed44b37c.jpg
-/static/bundle.js
-/src/css/style.css
-/index.html
-/bio.html
-/reactTutPart1.html
-/about.html
-/projects.html
-/projects/projectTired.html
-/projects/backOffice.html
-/projects/sweChan.html
-/contact.html
-/404.html
+/portal/src/assets/KoPubDotum-Bold.eot
+/portal/src/assets/KoPubDotum-Light.eot
+/portal/src/assets/KoPubDotum-Medium.eot
+/portal/src/assets/KoPubDotumPB.eot
+/portal/src/assets/KoPubDotum-Bold.woff
+/portal/src/assets/KoPubDotum-Light.woff
+/portal/src/assets/KoPubDotum-Medium.woff
+/portal/src/assets/KoPubDotumPB.woff
+/portal/4a8380113927d6b45132b7ba89c10bcd.jpg
+/portal/4a127a006a33ff44a147f05d220204d3.png
+/portal/01c9c905d1bebbd348072dbbd238b8fe.png
+/portal/3d54e833ba00976d9f34c83a29c8b884.png
+/portal/5c8c162bea49826ce6d98fa5ed44b37c.jpg
+/portal/static/bundle.js
+/portal/src/css/style.css
+/portal/index.html
+/portal/bio.html
+/portal/reactTutPart1.html
+/portal/about.html
+/portal/projects.html
+/portal/projects/projectTired.html
+/portal/projects/backOffice.html
+/portal/projects/sweChan.html
+/portal/contact.html
+/portal/404.html
 
 NETWORK:
 *
