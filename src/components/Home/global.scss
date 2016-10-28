@@ -1,0 +1,61 @@
+/*
+ * Fonts
+ */
+
+@font-face {
+  font-family: 'KoPub Dotum';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../../assets/KoPubDotum-Light.eot');
+  src: url('../../assets/KoPubDotum-Light.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/KoPubDotum-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'KoPub Dotum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../assets/KoPubDotum-Medium.eot');
+  src: url('../../assets/KoPubDotum-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/KoPubDotum-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'KoPub Dotum';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../assets/KoPubDotum-Bold.eot');
+  src: url('../../assets/KoPubDotum-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/KoPubDotum-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'KoPubDotumPB';
+  font-style: normal;
+  src: url('../../assets/KoPubDotumPB.eot');
+  src: url('../../assets/KoPubDotumPB.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/KoPubDotumPB.woff') format('woff');
+}
+
+
+/*
+ * Globals
+ */
+body {
+  font-family: 'KoPub Dotum', sans-serif;
+  font-size: 10px;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  &:active, &:hover, &:visited {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
