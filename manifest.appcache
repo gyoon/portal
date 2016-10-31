@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 74664d8e7a376e194bc2
+# 3a5b63c7348f67e5d2da
 
 /portal/src/assets/KoPubDotum-Bold.eot
 /portal/src/assets/KoPubDotum-Light.eot
@@ -9,6 +9,7 @@ CACHE MANIFEST
 /portal/src/assets/KoPubDotum-Light.woff
 /portal/src/assets/KoPubDotum-Medium.woff
 /portal/src/assets/KoPubDotumPB.woff
+/portal/src/components/Bio/historyList.json
 /portal/src/components/Tumblr/tumblrList.json
 /portal/4a8380113927d6b45132b7ba89c10bcd.jpg
 /portal/4a127a006a33ff44a147f05d220204d3.png
@@ -21,6 +22,7 @@ CACHE MANIFEST
 /portal/portal/bio.html
 /portal/portal/lab.html
 /portal/portal/photo.html
+/portal/portal/blogs.html
 /portal/portal/tumblr.html
 /portal/portal/reactTutPart1.html
 /portal/portal/about.html

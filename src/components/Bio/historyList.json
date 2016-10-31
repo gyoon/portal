@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "title": "Twitter",
+      "date": "07/2015 - 07/2016",
+      "text": "Responsibilities: SEO, SEA, E-Mail Marketing",
+      "type": false
+    },
+    {
+      "title": "Facebook",
+      "date": "07/2015 - 07/2016",
+      "text": "Responsibilities: HTML5/CSS3, LESS/SASS, jQuery, CanJS, JavaScript, Canvas, PHP, MySQL, Ruby, Python",
+      "type": false
+    },
+    {
+      "title": "Google",
+      "date": "07/2013 - 07/2014",
+      "text": "Responsibilities: HTML5/CSS3, LESS/SASS, jQuery, CanJS",
+      "type": false
+    },
+    {
+      "title": "Apple",
+      "date": "07/2012 - 07/2013",
+      "text": "Responsibilities: HTML5/CSS3, LESS/SASS",
+      "type": false
+    },
+    {
+      "title": "",
+      "date": "2016",
+      "text": "",
+      "type": true
+    },
+    {
+      "title": "Microsoft",
+      "date": "07/2011 - 07/2012",
+      "text": "Responsibilities: HTML5/CSS3",
+      "type": false
+    },
+    {
+      "title": "",
+      "date": "2014",
+      "text": "",
+      "type": true
+    }
+  ]
+}
