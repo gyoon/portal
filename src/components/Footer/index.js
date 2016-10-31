@@ -6,7 +6,7 @@ export default class Footer extends Component {
 		return (
 		<div>
 			<footer className="blog-footer">
-			  <p className='footer'>© 2016 Timo Obereder</p>
+			  <p className='footer'>Copyright ⓒ 2016 Gyoon Co., Ltd.. All Right Reserved.</p>
 			</footer>
 		</div>
 		)

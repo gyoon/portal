@@ -27,19 +27,21 @@ export default class NavBar extends Component {
 
     render() {
 
-        let bioPath, projectsPath,labPath, photoPath, tumblrPath;
+        let bioPath, projectsPath,labPath, photoPath, tumblrPath, blogsPath;
         if (module.hot) {
             bioPath = '/bio';
             projectsPath = '/projects';
             labPath = '/lab';
             photoPath = "/photo";
             tumblrPath = "/tumblr";
+            blogsPath = "/blogs";
         } else {
             bioPath = '/portal/bio';
             projectsPath = '/portal/projects';
             labPath = '/portal/lab';
             photoPath = "/portal/photo";
             tumblrPath = "/portal/tumblr";
+            blogsPath = "/portal/blogs";
         }
 
 		return (
@@ -52,6 +54,7 @@ export default class NavBar extends Component {
                             <li><Link className="blog-nav-item transition" to={projectsPath}>Projects</Link></li>
                             <li><Link className="blog-nav-item transition" to={labPath}>Lab</Link></li>
                             <li><Link className="blog-nav-item transition" to={photoPath}>Photo</Link></li>
+                            <li><Link className="blog-nav-item transition" to={blogsPath}>Blogs</Link></li>
                             <li><Link className="blog-nav-item transition" to={tumblrPath}>Tumblr</Link></li>
                         {
                         //<li><IndexLink className="blog-nav-item transition" onClick={this.showSideBar} to="/portal">Home</IndexLink></li>

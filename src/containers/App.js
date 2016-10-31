@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import Bio from '../components/Bio';
 import Lab from '../components/Lab';
 import Photo from '../components/Photo';
+import Blogs from '../components/Blogs';
 import Tumblr from '../components/Tumblr';
 
 import Home from '../components/Home';
@@ -35,6 +36,7 @@ export const routes = (
         <Route path='bio' title='App - Bio' component={Bio} />
         <Route path='lab' title='App - Lab' component={Lab} />
         <Route path='photo' title='App - Photo' component={Photo} />
+        <Route path='blogs' title='App - Blog' component={Blogs} />
         <Route path='tumblr' title='App - Tumblr' component={Tumblr} />
 
 		<Route path='reactTutPart1' title='App - React Tutorial Chapter 1' component={ReactTutPart1} />
