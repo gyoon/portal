@@ -38,7 +38,7 @@
         transform: scale(.9, .9);
         display: inline-block;
         transition: color 0.5s ease;
-        &:hover, &:active {
+        &.active, &:hover, &:active {
           color: #ec0101;
         }
       }

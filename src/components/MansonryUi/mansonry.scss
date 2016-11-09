@@ -22,12 +22,34 @@
 }
 
 /*
- * value
+ * global
  */
 
 $type    : '.gyoonView';
 $name    : '.gyoonCard';
-$table-background: transparent  !default;
+
+$theme-shadow: 0 1px 3px 0 #D4D4D5,0 0 0 1px #D4D4D5  !default;
+$theme-background: #fff  !default;
+$theme-radius: .28571429rem  !default;
+
+$layout-width: 190px  !default;
+$layout-margin: 1em  !default;
+
+$ani-transition: .6s cubic-bezier(.4,.38,0,1.19)  !default;
+
+$content-topBorder: 1px solid rgba(34,36,38,.1)  !default;
+$content-fontSize: 1em  !default;
+$content-padding: 1em  !default;
+$content-headerColor: rgba(0,0,0,.85)  !default;
+$content-headerFontSize: 1.28571429em  !default;
+$content-metaFontSize: 1em  !default;
+$content-metaColor: rgba(0,0,0,.4)  !default;
+$content-descriptionFontSize: .5em  !default;
+$content-descriptionColor: rgba(0,0,0,.68)  !default;
+$extra-border: 1px solid rgba(0,0,0,.05)!important;
+$extra-padding: .75em 1em  !default;
+$extra-Color: rgba(0,0,0,.4) !default;
+
 $table-align: (
         left: left,
         center: center,
@@ -39,9 +61,9 @@ $table-align: (
  */
 
 @mixin layout {
-  margin: 1em;
+  margin: $layout-margin;
   max-width: 100%;
-  width: 190px;
+  width: $layout-width;
   min-height: 0;
   padding: 0;
   border: none;
@@ -51,13 +73,13 @@ $table-align: (
 }
 
 @mixin theme {
-  box-shadow: 0 1px 3px 0 #D4D4D5,0 0 0 1px #D4D4D5;
-  background: #FFF;
-  border-radius: .28571429rem;
+  box-shadow: $theme-shadow;
+  background: $theme-background;
+  border-radius: $theme-radius;
 }
 
 @mixin ani {
-  transition: .6s cubic-bezier(.4,.38,0,1.19);
+  transition: $ani-transition;
 }
 
 @mixin image {
@@ -68,7 +90,6 @@ $table-align: (
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding: 0;
-  background: rgba(0,0,0,.05);
   overflow: hidden;
   > img {
     width: 100%;
@@ -82,29 +103,28 @@ $table-align: (
 
 @mixin content {
   flex-grow: 1;
-  border: none;
-  border-top: 1px solid rgba(34,36,38,.1);
+  border-top: $content-topBorder;
   background: 0 0;
   margin: 0;
-  padding: 1em;
+  padding: $content-padding;
   box-shadow: none;
-  font-size: 1em;
+  font-size: $content-fontSize;
   border-radius: 0;
   > .header {
     font-weight: 700;
-    font-size: 1.28571429em;
+    font-size: $content-headerFontSize;
     margin-top: -.21425em;
     line-height: 1.2857em;
-    color: rgba(0,0,0,.85);
+    color: $content-headerColor;
   }
   > .meta {
-    font-size: 1em;
-    color: rgba(0,0,0,.4);
+    font-size: $content-metaFontSize;
+    color: $content-metaColor;
   }
   > .description {
-    margin-top: .5em;
+    margin-top: $content-descriptionFontSize;
     clear: both;
-    color: rgba(0,0,0,.68);
+    color: $content-descriptionColor;
   }
 }
 
@@ -114,17 +134,16 @@ $table-align: (
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   flex-grow: 0;
-  border-top: 1px solid rgba(0,0,0,.05)!important;
+  border-top: $extra-border;
   position: static;
   background: 0 0;
   width: auto;
   margin: 0;
-  padding: .75em 1em;
+  padding: $extra-padding;
   top: 0;
   left: 0;
-  color: rgba(0,0,0,.4);
+  color: $extra-Color;
   box-shadow: none;
-  transition: color .1s ease;
   display: flex;
   align-items: center;
   align-content: center;
@@ -145,7 +164,7 @@ $table-align: (
 /*
  * Init
  */
-@mixin gyoon($selector: $name) {
+@mixin gyoonCard($selector: $name) {
   #{$selector} {
     @include layout;
     @include theme;
@@ -162,4 +181,4 @@ $table-align: (
   }
 }
 
-@include gyoon;
+@include gyoonCard;

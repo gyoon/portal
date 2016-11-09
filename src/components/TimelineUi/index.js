@@ -12,14 +12,14 @@ export default class Timeline extends Component {
     }
 
     componentDidMount() {
-        setTimeout(function() { this.setState({loadAni: true}); }.bind(this), 40);
+        setTimeout(function() { this.setState({loadAni: true}); }.bind(this), 100);
     }
 
 
     render(){
         var aniClassName = this.state.loadAni === true ? 'timelineBox ani' : 'timelineBox';
         const childElements = this.props.jsonDate.map(function(element, index){
-            if(element.type){
+            if(element.type == "y"){
                 return (
                     <li className={aniClassName} key={index}>
                         <div className="timelineDate bigDate"><div className="big">{element.date}</div></div>
@@ -31,6 +31,18 @@ export default class Timeline extends Component {
                         </p>
                     </li>
                 );
+            } else if(element.type == "c") {
+                return (
+                    <li className={aniClassName} key={index}>
+                        <div className="timelineDate">{element.date}</div>
+                        <p className="timelineTitle company">
+                            {element.title}
+                            <span className="timelineText">
+                                {element.text}
+                            </span>
+                        </p>
+                    </li>
+                )
             } else {
                 return (
                     <li className={aniClassName} key={index}>
@@ -47,7 +59,7 @@ export default class Timeline extends Component {
         });
 
         return (
-            <ul className="timeline">
+            <ul className="gyoonTimeline">
                 {childElements}
             </ul>
         )

@@ -1,46 +1,154 @@
 {
   "posts": [
     {
-      "title": "Twitter",
-      "date": "07/2015 - 07/2016",
-      "text": "Responsibilities: SEO, SEA, E-Mail Marketing",
-      "type": false
+      "title": "",
+      "date": "ing",
+      "text": "",
+      "type": "y"
     },
     {
-      "title": "Facebook",
-      "date": "07/2015 - 07/2016",
-      "text": "Responsibilities: HTML5/CSS3, LESS/SASS, jQuery, CanJS, JavaScript, Canvas, PHP, MySQL, Ruby, Python",
-      "type": false
+      "title": "Core System",
+      "date": "04/2016",
+      "text": "react",
+      "type": "n"
     },
     {
-      "title": "Google",
-      "date": "07/2013 - 07/2014",
-      "text": "Responsibilities: HTML5/CSS3, LESS/SASS, jQuery, CanJS",
-      "type": false
+      "title": "Web IDE (WSDK)",
+      "date": "04/2015",
+      "text": "dojo",
+      "type": "n"
     },
     {
-      "title": "Apple",
-      "date": "07/2012 - 07/2013",
-      "text": "Responsibilities: HTML5/CSS3, LESS/SASS",
-      "type": false
+      "title": "Source code webida open development.",
+      "date": "09/2015",
+      "text": "dojo",
+      "type": "n"
+    },
+    {
+      "title": "Based on 3.0 dibs tizen sdk build systems.",
+      "date": "01/2015",
+      "text": "dojo",
+      "type": "n"
+    },
+    {
+      "title": "M project Mail Admin UI",
+      "date": "11/2014",
+      "text": "angular",
+      "type": "n"
+    },
+    {
+      "title": "S-Core",
+      "date": "11/2014",
+      "text": "Joining the company",
+      "type": "c"
     },
     {
       "title": "",
-      "date": "2016",
+      "date": "2015",
       "text": "",
-      "type": true
+      "type": "y"
     },
     {
-      "title": "Microsoft",
-      "date": "07/2011 - 07/2012",
-      "text": "Responsibilities: HTML5/CSS3",
-      "type": false
+      "title": "Samsung SDS Efss",
+      "date": "07/2014",
+      "text": "Structural Design of managers and publishing user",
+      "type": "n"
+    },
+    {
+      "title": "Samsung SDS gurumong",
+      "date": "06/2014",
+      "text": "Structural Design of managers and publishing user",
+      "type": "n"
+    },
+    {
+      "title": "Samsung SDS web magazine",
+      "date": "07/2014",
+      "text": "Samsung SDS web magazine SDS Saram Renewal.",
+      "type": "n"
+    },
+    {
+      "title": "AMOEBA",
+      "date": "05/2014",
+      "text": "Joining the company",
+      "type": "c"
     },
     {
       "title": "",
       "date": "2014",
       "text": "",
-      "type": true
+      "type": "y"
+    },
+    {
+      "title": "Ministry of Culture, Sports and Tourism",
+      "date": "12/2012",
+      "text": "Upgrading and operating the business portal parliamentary Photo",
+      "type": "n"
+    },
+    {
+      "title": "Gangnam-gu Office",
+      "date": "07/2009",
+      "text": "SAT TV Internet community students",
+      "type": "n"
+    },
+    {
+      "title": "Korea University",
+      "date": "07/2009",
+      "text": "Brain Science Research Learning Site",
+      "type": "n"
+    },
+    {
+      "title": "Asset Management Association",
+      "date": "11/2007",
+      "text": "Cyber ​​education web page development",
+      "type": "n"
+    },
+    {
+      "title": "Korea International Trade Association",
+      "date": "06/2006 ",
+      "text": "Trade Academy Cyber ​​Academy and Website development",
+      "type": "n"
+    },
+    {
+      "title": "Woosuk University",
+      "date": "03/2006",
+      "text": "LMS Management System Development",
+      "type": "n"
+    },
+    {
+      "title": "XOsoft",
+      "date": "11/2005",
+      "text": "Joining the company",
+      "type": "c"
+    },
+    {
+      "title": "",
+      "date": "2005",
+      "text": "",
+      "type": "y"
+    },
+    {
+      "title": "Gyeonggi Province Government",
+      "date": "06/2005",
+      "text": "Tourist touch screen development",
+      "type": "n"
+    },
+    {
+      "title": "Uijeongbu Arts Center",
+      "date": "09/2004",
+      "text": "Website development and operation",
+      "type": "n"
+    },
+    {
+      "title": "Garam Information and Communication",
+      "date": "05/2004",
+      "text": "Joining the company",
+      "type": "c"
+    },
+    {
+      "title": "",
+      "date": "2004",
+      "text": "",
+      "type": "y"
     }
   ]
 }

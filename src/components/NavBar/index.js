@@ -14,15 +14,23 @@ export default class NavBar extends Component {
       super()
       this.hideSideBar = this.hideSideBar.bind(this)
       this.showSideBar = this.showSideBar.bind(this)
-      this.state = { showSideBar: false}
+      this.menuActive = this.menuActive.bind(this)
+      this.state = {
+          showSideBar: false,
+          isActive: 'active'
+      }
     }
 
     hideSideBar() {
-      this.setState({ showSideBar: false });
+        this.setState({ showSideBar: false });
     }
 
     showSideBar() {
-      this.setState({ showSideBar: true });
+        this.setState({ showSideBar: true });
+    }
+
+    menuActive() {
+        this.setState({isActive: this.state.isActive === 'active' ? '' : 'active' });
     }
 
     render() {
@@ -44,26 +52,20 @@ export default class NavBar extends Component {
             blogsPath = "/portal/blogs";
         }
 
+        let pathname = location.pathname;
+
 		return (
 			<div>
                 <div className="headerContainer">
                     <Header />
                     <nav className="navMenu">
                         <ul>
-                            <li><Link className="blog-nav-item transition" to={bioPath}>Bio</Link></li>
-                            <li><Link className="blog-nav-item transition" to={projectsPath}>Projects</Link></li>
-                            <li><Link className="blog-nav-item transition" to={labPath}>Lab</Link></li>
-                            <li><Link className="blog-nav-item transition" to={photoPath}>Photo</Link></li>
-                            <li><Link className="blog-nav-item transition" to={blogsPath}>Blogs</Link></li>
-                            <li><Link className="blog-nav-item transition" to={tumblrPath}>Tumblr</Link></li>
-                        {
-                        //<li><IndexLink className="blog-nav-item transition" onClick={this.showSideBar} to="/portal">Home</IndexLink></li>
-                        //<li><Link className="blog-nav-item transition" onClick={this.showSideBar} to="/portal/about">About</Link></li>
-                        //<li><Link className="blog-nav-item transition" onClick={this.showSideBar} to="/portal/projects">Projects</Link></li>
-                        //<li><Link className="blog-nav-item transition" onClick={this.showSideBar} to="/portal/contact">Contact</Link></li>
-
-                            }
-
+                            <li><Link className={pathname === bioPath ? 'active' : ''} onClick={this.menuActive} to={bioPath}>Bio</Link></li>
+                            <li><Link className={pathname === projectsPath ? 'active' : ''} onClick={this.menuActive} to={projectsPath}>Projects</Link></li>
+                            <li><Link className={pathname === labPath ? 'active' : ''} onClick={this.menuActive} to={labPath}>Lab</Link></li>
+                            <li><Link className={pathname === photoPath ? 'active' : ''} onClick={this.menuActive} to={photoPath}>Photo</Link></li>
+                            <li><Link className={pathname === blogsPath ? 'active' : ''} onClick={this.menuActive} to={blogsPath}>Blogs</Link></li>
+                            <li><Link className={pathname === tumblrPath ? 'active' : ''} onClick={this.menuActive} to={tumblrPath}>Tumblr</Link></li>
                         </ul>
                     </nav>
                 </div>

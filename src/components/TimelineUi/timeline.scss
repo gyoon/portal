@@ -1,86 +1,147 @@
 /*
- * tumblr
+ * timeline
  */
 
+/*
+ * common
+ */
 
-.timeline {
-  width: 650px;
-  margin: 40px auto;
+@mixin breakpoints($selector) {
+  #{$selector} {
+    @content;
+  }
+}
+
+
+/*
+ * global
+ */
+
+$type    : '.gyoonView';
+$name    : '.gyoonTimeline';
+
+$theme-shadow: 0 1px 3px 0 #D4D4D5,0 0 0 1px #D4D4D5  !default;
+
+/*
+ * Build
+ */
+
+@mixin layout {
+  margin: 0px auto;
   list-style: none;
   position: relative;
   &:before {
     content: '';
     position: absolute;
-    left:205px;
+    left:62px;
     background-color: #999;
-    width: 5px;
+    width: 2px;
     height: 100%;
   }
-  .timelineBox {
-    display: flex;
-    transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
-    margin-top: -50px;
-    &.ani {
-      margin-top: 0px;
-    }
+}
+
+@mixin timelineBox {
+  display: flex;
+  transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
+  margin-top: -50px;
+  &.ani {
+    margin-top: 0px;
+  }
+  &:last-child {
+    border: 0;
+  }
+  &:first-child {
     .timelineDate {
-      width: 160px;
-      position: relative;
-      font-size: 14px;
-      line-height: 2.5;
-      color: #aaa;
-      display: block;
-      padding: 20px 20px 20px 25px;
-      &.bigDate:after {display: none}
-      .big {
-        font-size: 24px;
-        color: #fff;
-        background: #000;
-        width: 80px;
-        height: 80px;
-        border-radius: 80px;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        margin-left: 142px;
-      }
       &:after {
-        content: '';
-        position: absolute;
-        top: 28px;
-        right: -13px;
-        display: block;
-        width: 10px;
-        height: 10px;
-        border: 5px solid #999;
-        border-radius: 50%;
-        background: #fff;
+        background: #cfc;
       }
     }
-    .timelineTitle {
-      display: block;
-      padding: 20px;
-      line-height: 1.4;
-      flex: 1;
-      font-size: 24px;
-    }
-    .timelineText {
-      display: block;
-      margin: 5px 0 0;
-      font-size: 12px;
-      font-style: italic;
-      color: #aaa;
-    }
-    &:last-child {
-      border: 0;
-    }
-    &:first-child {
-      .timelineDate {
-        &:after {
-          background: #cfc;
+  }
+}
+
+@mixin timelineDate {
+  width: 60px;
+  position: relative;
+  font-size: 12px;
+  line-height: 2.5;
+  color: #aaa;
+  display: block;
+  padding: 10px 0px 10px 0px;
+  &.bigDate:after {display: none}
+  .big {
+    font-size: 12px;
+    color: #fff;
+    background: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-left: 43px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 57px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    background: #fff;
+  }
+}
+
+@mixin timelineTitle {
+  display: block;
+  padding: 12px 20px 10px 16px;
+  flex: 1;
+  font-size: 12px;
+  &.company {
+    font-size: 14px;
+  }
+}
+
+@mixin timelineText {
+  display: block;
+  font-size: 10px;
+  font-style: italic;
+  color: #aaa;
+}
+
+/*
+ * Options
+ */
+
+@mixin small {
+  font-size: 10px;
+}
+@include breakpoints('.small') {
+  @include small;
+}
+
+/*
+ * Init
+ */
+@mixin gyoonTimeline($selector: $name) {
+  #{$selector} {
+    @include layout;
+    > .timelineBox {
+      @include timelineBox;
+      > .timelineDate {
+        @include timelineDate;
+      }
+      > .timelineTitle {
+        @include timelineTitle;
+        > .timelineText {
+          @include timelineText;
         }
       }
     }
   }
 }
+
+@include gyoonTimeline;
