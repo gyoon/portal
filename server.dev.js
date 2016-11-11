@@ -15,7 +15,7 @@ new WebpackDevServer(webpack(config), { // Start a server
     "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
   },
   inline: true,
-  quiet: true,
+  quiet: false,
   historyApiFallback: true
 }).listen(3000, '0.0.0.0', function (err, result) {
   if (err) {
