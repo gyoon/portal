@@ -35,7 +35,7 @@ export default class NavBar extends Component {
 
     render() {
 
-        let bioPath, projectsPath,labPath, photoPath, tumblrPath, blogsPath;
+        let bioPath, projectsPath,labPath, photoPath, tumblrPath, blogsPath, pathname;
         if (module.hot) {
             bioPath = '/bio';
             projectsPath = '/projects';
@@ -43,6 +43,7 @@ export default class NavBar extends Component {
             photoPath = "/photo";
             tumblrPath = "/tumblr";
             blogsPath = "/blogs";
+            pathname = location.pathname;
         } else {
             bioPath = '/portal/bio';
             projectsPath = '/portal/projects';
@@ -50,9 +51,8 @@ export default class NavBar extends Component {
             photoPath = "/portal/photo";
             tumblrPath = "/portal/tumblr";
             blogsPath = "/portal/blogs";
+            pathname = "";
         }
-
-        let pathname = location.pathname;
 
 		return (
 			<div>

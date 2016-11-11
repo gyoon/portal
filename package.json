@@ -7,6 +7,7 @@
     "start": "cross-env NODE_ENV=development node server.dev.js",
     "serve": "cross-env NODE_ENV=production node server.prod.js",
     "watch": "webpack --watch",
+    "build_prev": "cross-env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors && npm run build_mv",
     "build_mv": "mv dist/portal.html dist/index.html && mv dist/portal/* dist/ && rm dist/portal -r",
     "clean": "rm -rf dist",

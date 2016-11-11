@@ -42,8 +42,10 @@ export default class Home extends Component {
     }
 
 	render(){
+
         const width = window.innerWidth;
         const height = window.innerHeight;
+
         const d = 20;
 
 		return(

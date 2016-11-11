@@ -45,12 +45,16 @@ class SceneComponent extends React.Component {
     }
 
     render() {
+
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
         let scene = (
             <React3
                 ref="react3"
                 mainCamera="camera"
-                width={window.innerWidth}
-                height={window.innerHeight}
+                width={width}
+                height={height}
                 antialias
                 shadowMapEnabled={true}
                 clearColor={0xffffff}
@@ -62,7 +66,7 @@ class SceneComponent extends React.Component {
                         ref="camera"
                         name="camera"
                         fov={50}
-                        aspect={window.innerWidth / window.innerHeight}
+                        aspect={width / height}
                         near={1}
                         far={1000}
                         position={this.props.cameraPosition}
