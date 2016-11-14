@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import jsonp from 'jsonp';
 import tumblrAPI from './tumblrList.json';
-import MansonryUi from '../MansonryUi';
+import MansonryUi from '../../components/MansonryUi';
 import './tumblr.scss';
 
 {

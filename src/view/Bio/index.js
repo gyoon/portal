@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import historyAPI from './historyList.json';
-import Timeline from '../TimelineUi';
+import Timeline from '../../components/TimelineUi';
 import './bio.scss';
 
 export default class Bio extends Component {

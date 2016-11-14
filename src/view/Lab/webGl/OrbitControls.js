@@ -1091,7 +1091,6 @@ import THREE from 'three';
                 this.constraint.enableDamping = ! value;
 
             }
-
         },
 
         dynamicDampingFactor : {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import THREE from 'three';
 import App from './app.react';
 
-import './lab.scss';
+import './webGl.scss';
 
 export default class Lab extends Component {
 	render(){

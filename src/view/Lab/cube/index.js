@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import React3 from 'react-three-renderer';
 import THREE from 'three';
 
-import './global.scss';
+import './cube.scss';
 
 export default class Home extends Component {
 

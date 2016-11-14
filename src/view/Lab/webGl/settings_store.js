@@ -6,7 +6,6 @@ import Globals from './globals';
 
 let CHANGE_EVENT = 'change';
 
-
 class SettingsStore extends EventEmitter {
 
     constructor () {
@@ -17,7 +16,7 @@ class SettingsStore extends EventEmitter {
         this.bodyWidth = 30;
         this.bodyHeight = 50;
         this.bodyDepth = 20;
-        this.headSize = 15;
+        this.headSize = 35;
         this.armSize = 8;
         this.armLength = 35;
         this.sceneRotation = new THREE.Quaternion();

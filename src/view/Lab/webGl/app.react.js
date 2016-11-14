@@ -4,10 +4,7 @@ import SettingsStore from './settings_store';
 import Scene3D from './three/scene.react';
 import Minecraft from './three/minecraft.react';
 import World from './three/world.react';
-import Controls from './controls.react';
-import Stats from './stats.react';
 
-/* main react component, the only component with state */
 
 class App extends React.Component{
 
@@ -37,18 +34,6 @@ class App extends React.Component{
     render(){
         return(
             <div>
-            {
-                /*<Controls
-                    headSize={this.state.headSize}
-                    bodyWidth={this.state.bodyWidth}
-                    bodyHeight={this.state.bodyHeight}
-                    bodyDepth={this.state.bodyDepth}
-                    armLength={this.state.armLength}
-                    armSize={this.state.armSize}
-                    legLength={this.state.legLength}
-                    legSize={this.state.legSize}
-                />*/
-            }
                 <Scene3D
                     //sliderBusy={this.state.sliderBusy}
                     cameraPosition={this.state.cameraPosition}
@@ -67,7 +52,6 @@ class App extends React.Component{
                         />
                     </World>
                 </Scene3D>
-                <Stats />
             </div>
         );
     }

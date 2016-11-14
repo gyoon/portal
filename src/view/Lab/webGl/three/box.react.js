@@ -11,7 +11,6 @@ class Box extends React.Component {
     }
 
     render() {
-
         return (
             <mesh
                 key={THREE.Math.generateUUID()}
