@@ -20,6 +20,20 @@ class SceneComponent extends React.Component {
     constructor(props) {
         super(props);
         this._mouseUpListener = this._onMouseUp.bind(this);
+
+        this.state = {
+            cameraPosition: new THREE.Vector3(150, 200, 500)
+        };
+
+        let timesel = 150;
+
+        this._onAnimate = () => {
+
+            timesel = timesel + 1;
+            this.setState({
+                //cameraPosition: new THREE.Vector3(timesel, 200, 500)
+            });
+        };
     }
 
     shouldComponentUpdate(nextProps, nextState){
@@ -40,6 +54,7 @@ class SceneComponent extends React.Component {
         this._canvas.removeEventListener('mouseup', this._mouseUpListener, false);
         this._controls.dispose();
     }
+
 
     _onMouseUp(e){
         SettingsAction.updateCamera({
@@ -62,6 +77,7 @@ class SceneComponent extends React.Component {
                 antialias
                 shadowMapEnabled={true}
                 clearColor={0xffffff}
+                onAnimate={this._onAnimate}
             >
                 <resources>
                     <texture
@@ -151,7 +167,8 @@ class SceneComponent extends React.Component {
                         aspect={width / height}
                         near={1}
                         far={1000}
-                        position={this.props.cameraPosition}
+                        // position={this.props.cameraPosition}
+                        position={this.state.cameraPosition}
                         quaternion={this.props.cameraQuaternion}
                     />
 

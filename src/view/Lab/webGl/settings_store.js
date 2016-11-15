@@ -22,7 +22,7 @@ class SettingsStore extends EventEmitter {
         this.sceneRotation = new THREE.Quaternion();
         this.worldRotation = Globals.WORLD_ROTATION;
         this.sliderBusy = false;
-        this.cameraPosition = new THREE.Vector3(-100, 300, 400);
+        this.cameraPosition = new THREE.Vector3(150, 200, 500);
         this.cameraQuaternion = new THREE.Quaternion();
 
         AppDispatcher.register((action) => {

@@ -12,8 +12,6 @@ class Box extends React.Component {
 
     render() {
 
-        console.log(this.props.type)
-
         let maping = this.props.type;
         return (
             <mesh
