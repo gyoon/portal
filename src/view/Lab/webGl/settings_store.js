@@ -11,18 +11,18 @@ class SettingsStore extends EventEmitter {
     constructor () {
         super();
 
-        this.legLength = 40;
-        this.legSize = 10;
-        this.bodyWidth = 30;
-        this.bodyHeight = 50;
+        this.legLength = 26;
+        this.legSize = 12;
+        this.bodyWidth = 40;
+        this.bodyHeight = 40;
         this.bodyDepth = 20;
-        this.headSize = 35;
-        this.armSize = 8;
-        this.armLength = 35;
+        this.headSize = 36;
+        this.armSize = 10;
+        this.armLength = 46;
         this.sceneRotation = new THREE.Quaternion();
         this.worldRotation = Globals.WORLD_ROTATION;
         this.sliderBusy = false;
-        this.cameraPosition = new THREE.Vector3(0, 300, 500);
+        this.cameraPosition = new THREE.Vector3(-100, 300, 400);
         this.cameraQuaternion = new THREE.Quaternion();
 
         AppDispatcher.register((action) => {
@@ -66,8 +66,8 @@ class SettingsStore extends EventEmitter {
 
             config: {
                 head: {
-                    size: {x: headSize, y: headSize, z: headSize},
-                    position: {x: 0, y: 0, z: (legLength + bodyHeight) + (headSize / 2)},
+                    size: {x: headSize, y: headSize / 2 , z: headSize + 10},
+                    position: {x: 0, y: -10, z: (legLength + bodyHeight) + (headSize / 3)},
                     color: 0xcc00cc
                 },
                 body: {

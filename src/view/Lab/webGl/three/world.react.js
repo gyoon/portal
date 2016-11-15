@@ -29,7 +29,7 @@ class World extends React.Component{
                     />
                     <meshBasicMaterial
                         opacity={0.5}
-                        color={0x333000}
+                        color={0x999999}
                         side={THREE.DoubleSide}
                         wireframe
                     />

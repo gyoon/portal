@@ -7,6 +7,10 @@ import OrbitControls from '../OrbitControls';
 import World from './world.react';
 import Minecraft from './minecraft.react';
 
+import texHead from './textures/head.png';
+import texBody from './textures/body.png';
+import texArm from './textures/arm.png';
+import texLeg from './textures/leg.png';
 /* scene graph */
 
 class SceneComponent extends React.Component {
@@ -59,6 +63,84 @@ class SceneComponent extends React.Component {
                 shadowMapEnabled={true}
                 clearColor={0xffffff}
             >
+                <resources>
+                    <texture
+                        resourceId="textureHead"
+                        url={texHead}
+                        wrapS={THREE.RepeatWrapping}
+                        wrapT={THREE.RepeatWrapping}
+                        anisotropy={16}
+                    />
+                    <texture
+                        resourceId="textureBody"
+                        url={texBody}
+                        wrapS={THREE.RepeatWrapping}
+                        wrapT={THREE.RepeatWrapping}
+                        anisotropy={16}
+                    />
+                    <texture
+                        resourceId="textureArm"
+                        url={texArm}
+                        wrapS={THREE.RepeatWrapping}
+                        wrapT={THREE.RepeatWrapping}
+                        anisotropy={16}
+                    />
+                    <texture
+                        resourceId="textureLeg"
+                        url={texLeg}
+                        wrapS={THREE.RepeatWrapping}
+                        wrapT={THREE.RepeatWrapping}
+                        anisotropy={16}
+                    />
+                    <meshLambertMaterial
+                        resourceId="head"
+                        side={THREE.DoubleSide}
+                    >
+                        <textureResource
+                            resourceId="textureHead"
+                        />
+                    </meshLambertMaterial>
+                    <meshLambertMaterial
+                        resourceId="body"
+                        side={THREE.DoubleSide}
+                    >
+                        <textureResource
+                            resourceId="textureBody"
+                        />
+                    </meshLambertMaterial>
+                    <meshLambertMaterial
+                        resourceId="leftArm"
+                        side={THREE.DoubleSide}
+                    >
+                        <textureResource
+                            resourceId="textureArm"
+                        />
+                    </meshLambertMaterial>
+                    <meshLambertMaterial
+                        resourceId="rightArm"
+                        side={THREE.DoubleSide}
+                    >
+                        <textureResource
+                            resourceId="textureArm"
+                        />
+                    </meshLambertMaterial>
+                    <meshLambertMaterial
+                        resourceId="leftLeg"
+                        side={THREE.DoubleSide}
+                    >
+                        <textureResource
+                            resourceId="textureLeg"
+                        />
+                    </meshLambertMaterial>
+                    <meshLambertMaterial
+                        resourceId="rightLeg"
+                        side={THREE.DoubleSide}
+                    >
+                        <textureResource
+                            resourceId="textureLeg"
+                        />
+                    </meshLambertMaterial>
+                </resources>
                 <scene
                     ref="scene"
                 >
@@ -78,9 +160,24 @@ class SceneComponent extends React.Component {
                     />
 
                     <directionalLight
-                        color={new THREE.Color(0xFFFFFF)}
-                        intensity={1.5}
+                        color={new THREE.Color(0x333333)}
+                        intensity={5.5}
                         position={new THREE.Vector3(0, 0, 60)}
+                        castShadow
+
+                        shadowMapWidth={1024}
+                        shadowMapHeight={1024}
+
+                        shadowCameraLeft={-20}
+                        shadowCameraRight={20}
+                        shadowCameraTop={20}
+                        shadowCameraBottom={-20}
+
+                        shadowCameraFar={3 * 20}
+                        shadowCameraNear={20}
+
+                        position={new THREE.Vector3(0, 0, 20)}
+                        lookAt={new THREE.Vector3(0, 0, 0)}
                     />
 
           {this.props.children}

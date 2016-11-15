@@ -11,6 +11,10 @@ class Box extends React.Component {
     }
 
     render() {
+
+        console.log(this.props.type)
+
+        let maping = this.props.type;
         return (
             <mesh
                 key={THREE.Math.generateUUID()}
@@ -21,8 +25,8 @@ class Box extends React.Component {
                     height={this.props.size.y}
                     depth={this.props.size.z}
                 />
-                <meshBasicMaterial
-                    color={this.props.color}
+                <materialResource
+                    resourceId={maping}
                 />
             </mesh>
         );

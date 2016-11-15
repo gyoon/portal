@@ -50,7 +50,7 @@ export default class Home extends Component {
 
 		return(
             <div className="labContainer">
-                <h2>Home</h2>
+                <h2>Cube</h2>
                 <React3
                     mainCamera="camera" // this points to the perspectiveCamera below
                     width={width}

@@ -6,6 +6,8 @@ import Home from '../view/Home';
 import Bio from '../view/Bio';
 import Projects from '../view/Projects';
 import Lab from '../view/Lab';
+import Cube from '../view/Lab/cube';
+import WebGl from '../view/Lab/webGl';
 import Photo from '../view/Photo';
 import Blogs from '../view/Blogs';
 import Tumblr from '../view/Tumblr';
@@ -29,6 +31,8 @@ export const routes = (
         <Route path='bio' title='App - Bio' component={Bio} />
         <Route path='projects' title='App - Projects' component={Projects} />
         <Route path='lab' title='App - Lab' component={Lab} />
+        <Route path='lab/cube' title='App - Lab - cube' component={Cube} />
+        <Route path='lab/webGl' title='App - Lab - WebGl' component={WebGl} />
         <Route path='photo' title='App - Photo' component={Photo} />
         <Route path='blogs' title='App - Blog' component={Blogs} />
         <Route path='tumblr' title='App - Tumblr' component={Tumblr} />

@@ -22,36 +22,42 @@ class Minecraft extends React.Component {
                 scale={this.props.scale}
             >
                 <Box
+                    type='head'
                     key={'head'}
                     size={config.head.size}
                     color={config.head.color}
                     position={config.head.position}
                 />
                 <Box
+                    type='body'
                     key={'body'}
                     size={config.body.size}
                     color={config.body.color}
                     position={config.body.position}
                 />
                 <Box
+                    type='leftLeg'
                     key={'leftLeg'}
                     size={config.leftLeg.size}
                     color={config.leftLeg.color}
                     position={config.leftLeg.position}
                 />
                 <Box
+                    type='rightLeg'
                     key={'rightLeg'}
                     size={config.rightLeg.size}
                     color={config.rightLeg.color}
                     position={config.rightLeg.position}
                 />
                 <Box
+                    type='leftArm'
                     key={'leftArm'}
                     size={config.leftArm.size}
                     color={config.leftArm.color}
                     position={config.leftArm.position}
                 />
                 <Box
+                    type='rightArm'
                     key={'rightArm'}
                     size={config.rightArm.size}
                     color={config.rightArm.color}

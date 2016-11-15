@@ -70,7 +70,7 @@ module.exports = function(options){
                         exclude: /node_modules/
                     },
                     {
-                        test: /\.(json|eot|woff|woff2|svg)(\?\S*)?$/,
+                        test: /\.(json|eot|woff|woff2|svg|png)(\?\S*)?$/,
                         loader: "file-loader?limit=10000&mimetype=image&name=[path][name].[ext]"
                     }
                 ]

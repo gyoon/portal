@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import labAPI from './labList.json';
-import ReactSlick from '../../components/reactSlick';
+import LabLayout from '../../components/LabLayout';
 
 import './lab.scss';
 
@@ -22,11 +22,10 @@ export default class Lab extends Component {
     }
 
 	render(){
-        console.log(this.state.item)
 		return (
 			<div className="labContainer">
 			    <h2>Lab</h2>
-                <ReactSlick jsonDate={this.state.item} />
+                <LabLayout jsonDate={this.state.item} />
             </div>
 		)
 	}
