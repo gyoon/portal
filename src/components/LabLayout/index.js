@@ -4,20 +4,44 @@ import './labLayout.scss';
 
 export default class LabLayout extends Component {
 
-    render(){
-        const childElements = this.props.jsonDate.map(function(element, index){
+    constructor(props) {
+        super(props);
+        this.state = {
+            loadAni: false
+        }
+    }
 
-            let bioPath;
+    componentDidMount() {
+        setTimeout(function() { this.setState({loadAni: true}); }.bind(this), 100);
+    }
+
+    render(){
+
+        const aniClassName = this.state.loadAni === true ? 'labItem ani' : 'labItem';
+        const childElements = this.props.jsonDate.map(function(element, index, array){
+
+            let bioPath, i;
             if (module.hot) {
-                bioPath = `/lab/${element.url}`;
+                bioPath = `/lab/${element.link}`;
             } else {
-                bioPath = `/potal/lab/${element.url}`;
+                bioPath = `/potal/lab/${element.link}`;
             }
 
+            const library =  element.library.split(',').map(function(element, index, array){
+                return (
+                    <span key={index}>{element}</span>
+                )
+            })
+
             return (
-                <div key={index} className="labItem">
-                    <h3>{element.date}</h3>
-                    <Link to={bioPath}>{element.url}</Link>
+                <div key={index} className={aniClassName}>
+                    <Link to={bioPath}><img src={element.src} /></Link>
+                    <div className="titleBox">
+                        <h3><Link to={bioPath}>{element.name}</Link></h3>
+                        <span>{element.date}</span>
+                    </div>
+                    <div className="desc">{element.desc}</div>
+                    <div className="library">{library}</div>
                 </div>
             );
         });

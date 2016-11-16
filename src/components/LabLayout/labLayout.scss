@@ -4,9 +4,58 @@
 
 .labList {
   display: flex;
-  margin-left: 100px;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 100px;
 }
 
 .labItem {
-  width: 200px;
+  width: 240px;
+  margin: 0 10px 0px 10px;
+  box-shadow: 7px 6px 33px -2px rgba(173,170,173,0.75);
+  transition: .6s cubic-bezier(.4,.38,0,1.19);
+  transform: translate3d(300px, 0, 0px);
+  &.ani {
+    transform: translate3d(0, 0, 0px);
+  }
+  a {
+    display: block;
+  }
+  .titleBox {
+    display: flex;
+    align-content: center;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 14px 10px 14px;
+    h3 {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .desc {
+    padding: 10px 14px 20px 14px;
+    font-size: 13px;
+  }
+
+  .library {
+    padding: 0px 10px 10px 10px;
+    font-size: 1em;
+    span {
+      background-color: #6cc15b;
+      color:#fff;
+      display: inline-block;
+      padding: 2px 6px;
+      margin: 0 4px 4px 0;
+      border-radius: 4px;
+    }
+  }
+
+  img {
+    width: 100%;
+    transform: scale(0.9, 0.9);
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
 }

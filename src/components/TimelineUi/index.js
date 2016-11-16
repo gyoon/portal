@@ -17,7 +17,7 @@ export default class Timeline extends Component {
 
 
     render(){
-        var aniClassName = this.state.loadAni === true ? 'timelineBox ani' : 'timelineBox';
+        const aniClassName = this.state.loadAni === true ? 'timelineBox ani' : 'timelineBox';
         const childElements = this.props.jsonDate.map(function(element, index){
             if(element.type == "y"){
                 return (

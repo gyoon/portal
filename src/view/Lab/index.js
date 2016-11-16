@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import labAPI from './labList.json';
 import LabLayout from '../../components/LabLayout';
 
 import './lab.scss';
+
+import ironman from './resource/ironman.gif';
 
 export default class Lab extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            item: []
+            item: [
+                {
+                    "name": "Iron Man",
+                    "link": "webGl",
+                    "date": "2016.11.20",
+                    "src":  ironman,
+                    "desc": "Produced iron man paper art model using webGl",
+                    "library": "javascript,react,three,react-three-renderer"
+                },
+                {
+                    "name": "cube",
+                    "link": "cube",
+                    "date": "2016.11.20",
+                    "src":  "",
+                    "desc": "Produced iron man paper art model using webGl",
+                    "library": "javascript,react,three,react-three-renderer"
+                },
+            ]
         }
+
     }
 
-    componentDidMount() {
-        axios.get(labAPI)
-            .then(res => {
-                this.setState({item: res.data.response.posts})
-            });
-    }
-
-	render(){
+	render() {
 		return (
 			<div className="labContainer">
 			    <h2>Lab</h2>
